@@ -5,7 +5,7 @@ export const siteConfig = {
     "Leading teams to ship scalable MERN & Next.js products — with strong DevOps, cloud infrastructure, and AI integration expertise.",
   profile:
     "Senior Software Developer and Team Lead with hands-on experience building scalable web applications, REST APIs, and production backend systems. Strong expertise in JavaScript, TypeScript, React, Next.js, Node.js, Express, and MongoDB — combined with DevOps skills across AWS, Docker, Nginx, Linux servers, and PM2. Experienced in AI integration, performance optimization, secure deployments, and leading engineers to deliver production-grade solutions.",
-  location: "Jaipur, India",
+  location: "Rohtak, India",
   email: "",
   availability: "Open to senior roles, consulting & technical leadership",
   social: {
@@ -110,7 +110,7 @@ export const experience = [
       "Leading engineering delivery for scalable applications. Owning server-side architecture, AWS cloud infrastructure, Docker containerization, Nginx reverse proxy setup, Linux server administration, and PM2 process management. Driving AI integration into products, performance optimization, and team mentorship.",
   },
   {
-    period: "May 2025 — Present",
+    period: "May 2025 — Feb 2026",
     title: "MERN Stack Developer",
     company: "Inventcolab Pvt Ltd, Jaipur",
     description:
