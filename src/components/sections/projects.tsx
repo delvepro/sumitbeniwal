@@ -9,12 +9,14 @@ import { ArrowUpRight, BookOpen, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 
+const TILT_DIVISOR = 130;
+
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
-  const springRotateX = useSpring(rotateX, { stiffness: 400, damping: 40 });
-  const springRotateY = useSpring(rotateY, { stiffness: 400, damping: 40 });
+  const springRotateX = useSpring(rotateX, { stiffness: 500, damping: 55 });
+  const springRotateY = useSpring(rotateY, { stiffness: 500, damping: 55 });
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -23,8 +25,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     const rect = el.getBoundingClientRect();
     const cx = e.clientX - rect.left - rect.width / 2;
     const cy = e.clientY - rect.top - rect.height / 2;
-    rotateX.set(-cy / 40);
-    rotateY.set(cx / 40);
+    rotateX.set(-cy / TILT_DIVISOR);
+    rotateY.set(cx / TILT_DIVISOR);
   };
 
   const reset = () => {
@@ -43,7 +45,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       style={{
         rotateX: springRotateX,
         rotateY: springRotateY,
-        transformPerspective: 1200,
+        transformPerspective: 1600,
       }}
       className="group relative"
     >
