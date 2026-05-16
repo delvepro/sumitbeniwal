@@ -1,18 +1,15 @@
 "use client";
 
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
-import { useRef } from "react";
-import { projects } from "@/data/content";
+import { ArchitecturePanel } from "@/components/projects/architecture-panel";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { projects } from "@/data/projects";
+import type { Project } from "@/types/project";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { ArrowUpRight, BookOpen, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { useRef } from "react";
 
-function ProjectCard({
-  project,
-  index,
-}: {
-  project: (typeof projects)[0];
-  index: number;
-}) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
@@ -40,7 +37,7 @@ function ProjectCard({
       ref={ref}
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay: index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ delay: index * 0.08, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       style={{
@@ -51,7 +48,7 @@ function ProjectCard({
       className="group relative"
     >
       <motion.article
-        whileHover={{ y: -8 }}
+        whileHover={{ y: -6 }}
         className="glass-card relative h-full overflow-hidden rounded-2xl p-6 md:p-8"
       >
         <motion.div
@@ -69,35 +66,39 @@ function ProjectCard({
         </motion.div>
 
         <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-          {project.description}
-        </p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">{project.description}</p>
 
-        <motion.div
-          className="mt-6 flex flex-wrap gap-2"
-          initial="hidden"
-          whileHover="show"
-        >
+        <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-muted border border-border"
+              className="rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted"
             >
               {tag}
             </span>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.a
-          href={project.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent"
-          whileHover={{ x: 4 }}
-        >
-          Visit live site
-          <ArrowUpRight className="h-4 w-4" />
-        </motion.a>
+        <ArchitecturePanel architecture={project.architecture} />
+
+        <div className="mt-6 flex flex-wrap items-center gap-4 border-t border-border/60 pt-6">
+          <Link
+            href={`/projects/${project.slug}`}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-accent"
+          >
+            <BookOpen className="h-4 w-4" />
+            Read case study
+          </Link>
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-foreground"
+          >
+            Visit live site
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
       </motion.article>
     </motion.div>
   );
@@ -110,12 +111,12 @@ export function Projects() {
         <SectionHeading
           eyebrow="Portfolio"
           title="Featured projects"
-          description="9+ production apps — scalable backends, queues, auth, real-time systems, and AWS DevOps deployments."
+          description="Production apps with architecture breakdowns and full case studies — Problem, Architecture, Challenges, Optimization, and Scalability."
         />
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-2">
           {projects.map((project, i) => (
-            <ProjectCard key={project.title} project={project} index={i} />
+            <ProjectCard key={project.slug} project={project} index={i} />
           ))}
         </div>
       </motion.div>

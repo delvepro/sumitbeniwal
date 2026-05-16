@@ -15,7 +15,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Expertise"
           title="Skills & technologies"
-          description="Full-stack engineering, scalable backend architecture, real-time systems, AWS cloud, and CI/CD for production deployments."
+          description="TypeScript full-stack, PostgreSQL & MongoDB, scalable architecture, real-time systems, AWS cloud, and CI/CD."
         />
 
         <div className="grid gap-6 sm:grid-cols-2">

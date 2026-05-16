@@ -18,10 +18,12 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Sumit Beniwal | Senior Software Developer & Team Lead",
   description:
-    "Portfolio of Sumit Beniwal — Senior Software Developer & Team Lead at Delve Professionals LLC. MERN, Next.js, AWS, Docker, Linux, and AI integration.",
+    "Portfolio of Sumit Beniwal — Senior Software Developer & Team Lead. TypeScript, PostgreSQL, Next.js, scalable architecture, AWS, and DevOps.",
   keywords: [
     "senior software developer",
     "team lead",
+    "TypeScript",
+    "PostgreSQL",
     "DevOps",
     "AWS",
     "Docker",

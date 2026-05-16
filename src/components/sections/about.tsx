@@ -18,7 +18,7 @@ export function About() {
         <SectionHeading
           eyebrow="Profile"
           title="Senior Developer & Team Lead"
-          description="Scalable backend design, AWS DevOps, and team leadership — from clean architecture to production systems."
+          description="TypeScript & PostgreSQL at scale, AWS DevOps, and team leadership — from architecture to production systems."
         />
 
         <motion.div
