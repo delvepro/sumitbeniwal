@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Sumit Beniwal",
   role: "Senior Software Developer & Team Lead",
   tagline:
-    "Leading teams to ship scalable MERN & Next.js products — with strong DevOps, cloud infrastructure, and AI integration expertise.",
+    "Leading teams to ship scalable MERN & Next.js products — clean architecture, event-driven backends, DevOps, and cloud on AWS.",
   profile:
-    "Senior Software Developer and Team Lead with hands-on experience building scalable web applications, REST APIs, and production backend systems. Strong expertise in JavaScript, TypeScript, React, Next.js, Node.js, Express, and MongoDB — combined with DevOps skills across AWS, Docker, Nginx, Linux servers, and PM2. Experienced in AI integration, performance optimization, secure deployments, and leading engineers to deliver production-grade solutions.",
+    "Senior Software Developer and Team Lead with hands-on experience building scalable web applications, REST APIs, and production backend systems. Strong expertise in JavaScript, TypeScript, React, Next.js, Node.js, Express, and MongoDB — with clean architecture, repository & service-layer patterns, Redis, WebSockets, queues, and event-driven design. Experienced shipping notification services, real-time chat, queue-based email, and scalable auth. DevOps across Docker, Docker Compose, Nginx, CI/CD, GitHub Actions, AWS (EC2, S3, CloudFront, RDS, Route53, load balancers), Linux, and PM2.",
   location: "Rohtak, India",
   email: "",
   availability: "Open to senior roles, consulting & technical leadership",
@@ -38,16 +38,16 @@ export const stats = [
 
 export const aboutHighlights = [
   {
-    title: "Team Lead & Engineering",
-    text: "Leading development squads, code reviews, architecture decisions, and delivery of scalable full-stack products.",
+    title: "Backend & System Design",
+    text: "Clean architecture, repository & service-layer patterns, event-driven systems, rate limiting, Redis queues, WebSockets, and background jobs.",
   },
   {
-    title: "DevOps & Cloud",
-    text: "AWS, Docker, Nginx, Linux servers, PM2 process management, and reliable server-side deployments.",
+    title: "DevOps & Cloud (AWS)",
+    text: "Docker, Docker Compose, Nginx, CI/CD, GitHub Actions, EC2, S3, CloudFront, RDS, Route53, load balancers, Linux, and PM2.",
   },
   {
-    title: "MERN, Next.js & AI",
-    text: "Production apps with React, Node.js, MongoDB, REST APIs, and artificial intelligence integrations.",
+    title: "Team Lead & Production Systems",
+    text: "Leading squads to ship notification services, real-time chat, queue-based email, scalable auth, MERN/Next.js apps, and AI integrations.",
   },
 ];
 
@@ -67,26 +67,50 @@ export const skills = [
     ],
   },
   {
-    category: "Backend & Server Side",
+    category: "Backend & Architecture",
     items: [
       "Node.js",
       "Express.js",
       "MongoDB",
       "SQL",
       "REST APIs",
-      "Server Side",
+      "Clean Architecture",
+      "Repository Pattern",
+      "Service Layer Pattern",
+      "Scalable Backend Structure",
+      "Event-Driven Systems",
+      "Rate Limiting",
+      "Scalable Auth",
     ],
   },
   {
-    category: "DevOps & Cloud",
+    category: "Real-time, Queues & Systems",
     items: [
-      "Amazon Web Services (AWS)",
+      "Redis",
+      "WebSockets",
+      "Background Jobs",
+      "Queue Systems",
+      "Notification Services",
+      "Real-time Chat",
+      "Queue-based Email",
+    ],
+  },
+  {
+    category: "DevOps & Cloud (AWS)",
+    items: [
       "Docker",
+      "Docker Compose",
       "Nginx",
+      "CI/CD",
+      "GitHub Actions",
       "Linux",
-      "Servers",
       "PM2",
-      "AI Integration",
+      "EC2",
+      "S3",
+      "CloudFront",
+      "RDS",
+      "Route53",
+      "Load Balancer",
     ],
   },
   {
@@ -96,6 +120,7 @@ export const skills = [
       "GitHub",
       "Razorpay",
       "Social Media APIs",
+      "AI Integration",
       "AI-assisted Development",
     ],
   },
@@ -107,21 +132,21 @@ export const experience = [
     title: "Senior Software Developer / Team Lead",
     company: "Delve Professionals LLC",
     description:
-      "Leading engineering delivery for scalable applications. Owning server-side architecture, AWS cloud infrastructure, Docker containerization, Nginx reverse proxy setup, Linux server administration, and PM2 process management. Driving AI integration into products, performance optimization, and team mentorship.",
+      "Leading engineering delivery with clean architecture, repository & service-layer patterns, and event-driven backends. Owning Redis queues, WebSockets, background jobs, rate limiting, and systems such as notifications, real-time chat, and scalable auth. AWS (EC2, S3, CloudFront, RDS, Route53), Docker, Docker Compose, Nginx, CI/CD via GitHub Actions, Linux, and PM2.",
   },
   {
     period: "May 2025 — Feb 2026",
     title: "MERN Stack Developer",
     company: "Inventcolab Pvt Ltd, Jaipur",
     description:
-      "Developing scalable MERN & Next.js applications with secure backend APIs. Feature development, bug fixing, and performance optimization.",
+      "Built scalable MERN & Next.js apps with service-layer APIs, Redis caching, queue-based tasks, and Dockerized deployments. Feature delivery, performance tuning, and production bug fixes.",
   },
   {
     period: "Sep 2024 — Mar 2025",
     title: "Junior MERN Developer",
     company: "Ebizneeds Solution Pvt Ltd, Jaipur",
     description:
-      "Built production applications using React, Node.js, Express & MongoDB. Worked on UI improvements, API integration, and deployments.",
+      "Shipped production apps with React, Node.js, Express & MongoDB. REST APIs, auth flows, GitHub Actions CI/CD basics, and Linux/Nginx deployments.",
   },
   {
     period: "6 Months",
@@ -149,72 +174,86 @@ export const projects = [
   {
     title: "DelvePro — SaaS & IT Services",
     description:
-      "Developed a modern SaaS and IT services company website with responsive design. Improved website performance, accessibility, and SEO optimization. Created reusable UI components and a scalable frontend structure.",
-    tags: ["Next.js", "SEO", "UI/UX"],
+      "Modern SaaS and IT services site with scalable frontend structure, SEO, and performance tuning. Deployed with Docker, Nginx reverse proxy, and CI/CD via GitHub Actions on AWS (EC2, S3, CloudFront).",
+    tags: ["Next.js", "Docker", "Nginx", "GitHub Actions", "AWS", "SEO"],
     gradient: "from-indigo-500 to-violet-500",
     href: "https://www.delvepro.in/",
   },
   {
     title: "Telegram Channel Analyzer",
     description:
-      "Developed a Telegram analytics platform to track channel performance, audience engagement, and growth insights. Built an interactive dashboard for real-time analytics and data visualization with Python backend processing for data extraction and reporting.",
-    tags: ["React.js", "Python", "Analytics"],
+      "Analytics platform with real-time dashboards and event-driven data pipelines. Python backend for extraction and reporting; React frontend for live engagement metrics, growth insights, and visualization.",
+    tags: ["React", "Python", "Real-time", "Event-Driven", "Analytics"],
     gradient: "from-sky-500 to-cyan-500",
     href: "https://telegramagentfrontend.vercel.app/",
   },
   {
     title: "ONNFX — Forex Trading Platform",
     description:
-      "Built a forex trading platform with dynamic admin dashboard and user management system. Developed secure backend APIs with MongoDB for scalable data handling and responsive trading interfaces with optimized frontend performance.",
-    tags: ["Next.js", "React", "Vite", "Node.js", "MongoDB"],
+      "Forex platform with service-layer backend, scalable auth, rate-limited APIs, Redis caching, and WebSockets for live market updates. MongoDB for trade data; deployed on Linux with PM2, Nginx, and Docker.",
+    tags: ["Next.js", "Redis", "WebSockets", "Scalable Auth", "Rate Limiting", "Docker"],
     gradient: "from-emerald-500 to-teal-500",
     href: "https://www.onnfx.com/",
   },
   {
     title: "MyCompass UAE — IT Services Platform",
     description:
-      "Built an IT services platform with Admin Panel and Employee CRM functionalities. Developed backend APIs and database architecture for workflow management with responsive, scalable frontend implementation.",
-    tags: ["Next.js", "React", "Vite", "Node.js", "MongoDB"],
+      "IT services platform with clean architecture, repository-pattern APIs, and employee CRM workflows. Admin panel, role-based access, and scalable backend structure for multi-tenant operations.",
+    tags: ["Next.js", "Clean Architecture", "Repository Pattern", "CRM", "MongoDB"],
     gradient: "from-blue-500 to-indigo-500",
     href: "https://www.mycompassuae.com/",
   },
   {
     title: "Bluefin Realty — Real Estate Platform",
     description:
-      "Developed a real-estate platform similar to 99acres with Admin, Agent, and User panels. Built CRM and employee management modules, property listings, lead management, and role-based access systems.",
-    tags: ["React.js", "Node.js", "MongoDB", "CRM"],
+      "99acres-style real-estate platform with Admin, Agent, and User panels. CRM modules, lead management, scalable auth, and service-layer APIs for listings, inquiries, and role-based workflows.",
+    tags: ["React", "Node.js", "Service Layer", "Scalable Auth", "CRM", "MongoDB"],
     gradient: "from-cyan-500 to-blue-600",
     href: "https://www.realbluefin.com/",
   },
   {
     title: "PromoAds — Digital Marketing Website",
     description:
-      "Designed and developed a responsive digital marketing and advertising website. Created SEO-friendly pages with optimized performance, modern UI/UX, and scalable frontend architecture for business and service management.",
-    tags: ["Next.js", "SEO", "UI/UX"],
+      "Digital marketing site with SEO-optimized pages, reusable UI components, and cloud-ready deployment. Performance-focused frontend with scalable structure for campaigns and service pages.",
+    tags: ["Next.js", "SEO", "AWS S3", "CloudFront", "CI/CD"],
     gradient: "from-orange-500 to-pink-500",
     href: "https://www.promoadsreal.com/",
   },
   {
     title: "Tune Plus — Music Distribution Platform",
     description:
-      "Designed, developed, and scaled a full-stack music distribution platform delivering Singles, EPs, and Albums to 200+ global streaming, social, and radio platforms. Implemented secure role-based authentication, royalty tracking & analytics — handling 400K+ assets, 4K+ users, and 230M+ views.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "REST APIs"],
+      "Full-stack distribution platform (400K+ assets, 4K+ users, 230M+ views) with clean architecture, Redis queues, background jobs, queue-based email for release updates, scalable auth, in-app notifications, and royalty analytics at scale.",
+    tags: [
+      "React",
+      "Redis",
+      "Queue Systems",
+      "Background Jobs",
+      "Queue-based Email",
+      "Notifications",
+    ],
     gradient: "from-violet-500 to-fuchsia-500",
     href: "https://tuneplus.org/",
   },
   {
     title: "Imergey — Social Media Management Platform",
     description:
-      "LinkedIn-focused social media management with post scheduling, analytics, API-based auto-publishing, calendar workflows, dashboards, AI research insights, and role-based access for data-driven brand strategy.",
-    tags: ["React", "Node.js", "REST APIs", "AI", "Analytics"],
+      "LinkedIn management with Redis-backed job queues, background publishing, real-time dashboards via WebSockets, team chat for collaboration, queue-based email alerts, API integrations, AI insights, and role-based access.",
+    tags: [
+      "React",
+      "Redis",
+      "WebSockets",
+      "Real-time Chat",
+      "Queue-based Email",
+      "Event-Driven",
+    ],
     gradient: "from-cyan-500 to-blue-500",
     href: "http://103.189.173.7:2367/",
   },
   {
     title: "Rajat Ganga Jewellery — E-Commerce",
     description:
-      "Modern jewellery brand website with product catalogs, collections showcase, and inquiry workflows. Focus on performance, SEO, responsive UI, secure backend APIs, and admin content management.",
-    tags: ["Next.js", "Node.js", "SEO", "E-Commerce"],
+      "Jewellery e-commerce with catalog management, inquiry workflows, secure admin APIs, and production stack — Docker, Nginx, rate-limited public endpoints, and MongoDB-backed content management.",
+    tags: ["Next.js", "Node.js", "Docker", "Nginx", "Rate Limiting", "E-Commerce"],
     gradient: "from-amber-500 to-rose-500",
     href: "https://www.rajatgangajewelsstudio.com/",
   },
@@ -223,14 +262,18 @@ export const projects = [
 export const marqueeTech = [
   "React",
   "Next.js",
-  "Python",
   "Node.js",
   "MongoDB",
-  "AWS",
+  "Redis",
+  "WebSockets",
+  "Clean Architecture",
   "Docker",
-  "Vite",
-  "Linux",
-  "PM2",
+  "GitHub Actions",
+  "AWS EC2",
+  "S3",
+  "CloudFront",
+  "Nginx",
+  "CI/CD",
   "TypeScript",
-  "AI Integration",
+  "Event-Driven",
 ];

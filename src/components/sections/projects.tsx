@@ -110,7 +110,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Portfolio"
           title="Featured projects"
-          description="9+ production apps — SaaS, fintech, real estate, analytics, and e-commerce."
+          description="9+ production apps — scalable backends, queues, auth, real-time systems, and AWS DevOps deployments."
         />
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
