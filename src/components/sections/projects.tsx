@@ -13,8 +13,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
-  const springRotateX = useSpring(rotateX, { stiffness: 300, damping: 30 });
-  const springRotateY = useSpring(rotateY, { stiffness: 300, damping: 30 });
+  const springRotateX = useSpring(rotateX, { stiffness: 400, damping: 40 });
+  const springRotateY = useSpring(rotateY, { stiffness: 400, damping: 40 });
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -23,8 +23,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     const rect = el.getBoundingClientRect();
     const cx = e.clientX - rect.left - rect.width / 2;
     const cy = e.clientY - rect.top - rect.height / 2;
-    rotateX.set(-cy / 20);
-    rotateY.set(cx / 20);
+    rotateX.set(-cy / 40);
+    rotateY.set(cx / 40);
   };
 
   const reset = () => {
@@ -35,9 +35,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay: index * 0.08, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ delay: index * 0.04, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       style={{
@@ -48,19 +48,19 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       className="group relative"
     >
       <motion.article
-        whileHover={{ y: -6 }}
+        whileHover={{ y: -3 }}
         className="glass-card relative h-full overflow-hidden rounded-2xl p-6 md:p-8"
       >
         <motion.div
-          className={`absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br ${project.gradient} opacity-20 blur-2xl transition-opacity group-hover:opacity-40`}
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 6, repeat: Infinity }}
+          className={`absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br ${project.gradient} opacity-20 blur-2xl transition-opacity group-hover:opacity-30`}
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 10, repeat: Infinity }}
         />
 
         <motion.div
           className={`mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient} text-white shadow-lg`}
-          whileHover={{ rotate: [0, -10, 10, 0] }}
-          transition={{ duration: 0.5 }}
+          whileHover={{ rotate: [0, -5, 5, 0] }}
+          transition={{ duration: 0.35 }}
         >
           <ExternalLink className="h-5 w-5" />
         </motion.div>
