@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Sumit Beniwal",
-  role: "Senior Software Developer & Team Lead",
+  role: "Full Stack Developer & Senior Software Engineer",
   tagline:
-    "TypeScript-first senior engineer — scalable MERN & Next.js, PostgreSQL, event-driven backends, and AWS DevOps.",
+    "Sumit Beniwal — full stack developer & team lead. TypeScript, MERN stack, Next.js, Node.js, PostgreSQL, AWS DevOps & scalable production systems.",
   profile:
-    "Senior Software Developer and Team Lead building production systems with TypeScript across React, Next.js, and Node.js. Deep experience with PostgreSQL (relational modeling, migrations, reporting) and MongoDB for flexible domains — plus clean architecture, repository & service-layer patterns, Redis, WebSockets, queues, and event-driven design. Shipped notification services, real-time chat, queue-based email, and scalable auth at scale. DevOps: Docker, Docker Compose, Nginx, CI/CD, GitHub Actions, AWS (EC2, S3, CloudFront, RDS, Route53, load balancers), Linux, and PM2.",
+    "Sumit Beniwal is a Senior Full Stack Developer and Team Lead building production systems with TypeScript across React, Next.js, and Node.js. As a fullstack developer specializing in MERN stack, PostgreSQL (relational modeling, migrations, reporting), and MongoDB — plus clean architecture, repository & service-layer patterns, Redis, WebSockets, queues, and event-driven design. Shipped notification services, real-time chat, queue-based email, and scalable auth at scale. DevOps: Docker, Docker Compose, Nginx, CI/CD, GitHub Actions, AWS (EC2, S3, CloudFront, RDS, Route53, load balancers), Linux, and PM2.",
   location: "Rohtak, India",
   email: "",
   availability: "Open to senior roles, consulting & technical leadership",

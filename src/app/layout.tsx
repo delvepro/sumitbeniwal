@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { JetBrains_Mono, Outfit } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { buildRootMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -15,24 +15,7 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Sumit Beniwal | Senior Software Developer & Team Lead",
-  description:
-    "Portfolio of Sumit Beniwal — Senior Software Developer & Team Lead. TypeScript, PostgreSQL, Next.js, scalable architecture, AWS, and DevOps.",
-  keywords: [
-    "senior software developer",
-    "team lead",
-    "TypeScript",
-    "PostgreSQL",
-    "DevOps",
-    "AWS",
-    "Docker",
-    "MERN stack",
-    "Next.js",
-    "Sumit Beniwal",
-    "Delve Professionals",
-  ],
-};
+export const metadata = buildRootMetadata();
 
 export default function RootLayout({
   children,

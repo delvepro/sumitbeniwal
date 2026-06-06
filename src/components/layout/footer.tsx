@@ -18,8 +18,11 @@ export function Footer() {
         <motion.div className="text-center sm:text-left">
           <p className="font-semibold text-foreground">{siteConfig.name}</p>
           <p className="mt-1 text-sm text-muted">{siteConfig.role}</p>
+          <p className="mt-2 max-w-sm text-xs leading-relaxed text-muted/80">
+            Full stack developer · MERN & Next.js · TypeScript · Node.js · AWS DevOps · Rohtak, India
+          </p>
           <p className="mt-4 text-xs text-muted">
-            © {year} · Crafted with Next.js & Framer Motion
+            © {year} Sumit Beniwal · Full Stack Developer Portfolio
           </p>
         </motion.div>
 

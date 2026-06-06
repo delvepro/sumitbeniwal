@@ -24,8 +24,8 @@ export function Experience() {
       >
         <SectionHeading
           eyebrow="Career"
-          title="Work experience"
-          description="From trainee to team lead — shipping full-stack products with DevOps and cloud expertise."
+          title="Work experience — Sumit Beniwal, Full Stack Developer"
+          description="From trainee to senior full stack developer & team lead — shipping MERN, Next.js & production systems with AWS DevOps."
         />
 
         <div ref={timelineRef} className="relative">

@@ -112,8 +112,8 @@ export function Projects() {
       <motion.div className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Portfolio"
-          title="Featured projects"
-          description="Production apps with architecture breakdowns and full case studies — Problem, Architecture, Challenges, Optimization, and Scalability."
+          title="Featured projects by Sumit Beniwal"
+          description="Production full stack apps with architecture breakdowns — built by Sumit Beniwal, senior developer. Case studies: Problem, Architecture, Challenges, Optimization & Scalability."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">

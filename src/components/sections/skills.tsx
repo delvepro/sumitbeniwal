@@ -14,8 +14,8 @@ export function Skills() {
       <div ref={ref} className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Expertise"
-          title="Skills & technologies"
-          description="TypeScript full-stack, PostgreSQL & MongoDB, scalable architecture, real-time systems, AWS cloud, and CI/CD."
+          title="Skills — Full Stack Developer (TypeScript, MERN, AWS)"
+          description="Sumit Beniwal full stack skills: TypeScript, React, Next.js, Node.js, PostgreSQL, MongoDB, scalable architecture, real-time systems, AWS cloud & CI/CD."
         />
 
         <div className="grid gap-6 sm:grid-cols-2">

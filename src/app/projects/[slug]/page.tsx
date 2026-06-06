@@ -4,8 +4,14 @@ import { AnimatedBackground } from "@/components/ui/animated-background";
 import { Footer } from "@/components/layout/footer";
 import { CaseStudyContent } from "@/components/projects/case-study-content";
 import { ProjectCaseStudyHeader } from "@/components/projects/project-case-study-header";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getProjectBySlug, projectSlugs } from "@/data/projects";
 import { siteConfig } from "@/data/content";
+import {
+  buildBreadcrumbJsonLd,
+  buildProjectMetadata,
+  getSiteUrl,
+} from "@/lib/seo";
 import Link from "next/link";
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -19,10 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Project not found" };
 
-  return {
-    title: `${project.title} | Case Study — ${siteConfig.name}`,
-    description: project.description,
-  };
+  return buildProjectMetadata(project.title, project.description, slug);
 }
 
 export default async function ProjectCaseStudyPage({ params }: PageProps) {
@@ -30,8 +33,32 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
+  const siteUrl = getSiteUrl();
+
   return (
     <>
+      <JsonLd
+        data={[
+          buildBreadcrumbJsonLd([
+            { name: "Sumit Beniwal — Full Stack Developer", url: siteUrl },
+            { name: "Projects", url: `${siteUrl}/#projects` },
+            { name: project.title, url: `${siteUrl}/projects/${slug}` },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            name: project.title,
+            description: project.description,
+            author: {
+              "@type": "Person",
+              name: "Sumit Beniwal",
+              jobTitle: "Full Stack Developer",
+              url: siteUrl,
+            },
+            url: `${siteUrl}/projects/${slug}`,
+          },
+        ]}
+      />
       <AnimatedBackground />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
         <nav className="mx-auto flex h-16 max-w-4xl items-center justify-between px-6 lg:px-8">

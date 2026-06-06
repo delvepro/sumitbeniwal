@@ -17,8 +17,8 @@ export function About() {
       <motion.div ref={ref} className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Profile"
-          title="Senior Developer & Team Lead"
-          description="TypeScript & PostgreSQL at scale, AWS DevOps, and team leadership — from architecture to production systems."
+          title="Sumit Beniwal — Full Stack Developer & Team Lead"
+          description="Senior fullstack developer specializing in TypeScript, MERN stack, Next.js, PostgreSQL & AWS DevOps — from architecture to production systems."
         />
 
         <motion.div
