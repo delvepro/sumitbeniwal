@@ -1,33 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --muted: #64748b;
-  --surface: #ffffff;
-  --surface-elevated: #f1f5f9;
-  --border: #e2e8f0;
-  --accent: #6366f1;
-  --accent-secondary: #8b5cf6;
-  --accent-tertiary: #06b6d4;
-  --accent-muted: rgba(99, 102, 241, 0.12);
+  --background: #070b16;
+  --foreground: #f4f7ff;
+  --muted: #9aa8c7;
+  --surface: rgba(18, 28, 52, 0.55);
+  --surface-elevated: rgba(28, 40, 72, 0.72);
+  --border: rgba(96, 165, 250, 0.2);
+  --accent: #3b82f6;
+  --accent-secondary: #2563eb;
+  --accent-tertiary: #22d3ee;
+  --accent-muted: rgba(59, 130, 246, 0.18);
   --accent-foreground: #ffffff;
-  --nav-bg: rgba(248, 250, 252, 0.85);
+  --nav-bg: rgba(8, 12, 24, 0.72);
+  --nav-scroll-from: rgba(8, 12, 24, 0);
+  --glow-blue: rgba(59, 130, 246, 0.45);
+  --glow-cyan: rgba(34, 211, 238, 0.35);
+  --success: #22c55e;
+  --chip-bg: rgba(12, 20, 36, 0.72);
+  --input-bg: rgba(10, 18, 32, 0.8);
+  --avatar-from: #1a2240;
+  --avatar-via: #12182c;
+  --avatar-to: #0a1020;
+  --panel-bg: rgba(12, 20, 40, 0.45);
+  --panel-border: rgba(96, 165, 250, 0.22);
+  --panel-shadow: 0 0 40px rgba(56, 120, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.dark {
-  --background: #1c2129;
-  --foreground: #f1f5f9;
-  --muted: #a1adbd;
-  --surface: #262c36;
-  --surface-elevated: #323945;
-  --border: #3d4554;
-  --accent: #8b93f9;
-  --accent-secondary: #b39dfa;
-  --accent-tertiary: #3dd9f0;
-  --accent-muted: rgba(139, 147, 249, 0.18);
-  --accent-foreground: #1c2129;
-  --nav-bg: rgba(28, 33, 41, 0.88);
+.light {
+  --background: #f5f7fc;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-elevated: #ffffff;
+  --border: rgba(148, 163, 184, 0.35);
+  --accent: #2563eb;
+  --accent-secondary: #3b82f6;
+  --accent-tertiary: #0ea5e9;
+  --accent-muted: rgba(37, 99, 235, 0.1);
+  --accent-foreground: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --nav-scroll-from: rgba(245, 247, 252, 0);
+  --glow-blue: rgba(59, 130, 246, 0.28);
+  --glow-cyan: rgba(14, 165, 233, 0.22);
+  --success: #16a34a;
+  --chip-bg: rgba(255, 255, 255, 0.95);
+  --input-bg: #ffffff;
+  --avatar-from: #dbeafe;
+  --avatar-via: #e0f2fe;
+  --avatar-to: #f0f9ff;
+  --panel-bg: rgba(255, 255, 255, 0.78);
+  --panel-border: rgba(148, 163, 184, 0.28);
+  --panel-shadow:
+    0 10px 40px rgba(15, 23, 42, 0.06),
+    0 2px 10px rgba(59, 130, 246, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 @theme inline {
@@ -42,6 +69,9 @@
   --color-accent-tertiary: var(--accent-tertiary);
   --color-accent-muted: var(--accent-muted);
   --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-chip: var(--chip-bg);
+  --color-input: var(--input-bg);
   --font-sans: var(--font-outfit);
   --font-mono: var(--font-jetbrains);
 }
@@ -61,45 +91,108 @@ body {
   color: var(--accent-foreground);
 }
 
-.bg-grid {
-  background-image:
-    linear-gradient(to right, var(--border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 70%);
-}
-
 .gradient-text {
   background: linear-gradient(
-    135deg,
-    var(--accent) 0%,
-    var(--accent-secondary) 50%,
-    var(--accent-tertiary) 100%
+    90deg,
+    #60a5fa 0%,
+    #38bdf8 50%,
+    #22d3ee 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.glass-card {
-  background: color-mix(in srgb, var(--surface) 70%, transparent);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(16px);
-  box-shadow:
-    0 4px 24px -4px color-mix(in srgb, var(--foreground) 6%, transparent),
-    inset 0 1px 0 color-mix(in srgb, white 40%, transparent);
+.light .gradient-text {
+  background: linear-gradient(
+    90deg,
+    #2563eb 0%,
+    #3b82f6 45%,
+    #06b6d4 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.dark .glass-card {
-  background: color-mix(in srgb, var(--surface) 85%, transparent);
+.gradient-btn {
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #0ea5e9 100%);
   box-shadow:
-    0 4px 28px -8px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 color-mix(in srgb, white 10%, transparent);
+    0 0 24px rgba(59, 130, 246, 0.45),
+    0 8px 24px rgba(14, 165, 233, 0.25);
+}
+
+.light .gradient-btn {
+  box-shadow:
+    0 8px 24px rgba(37, 99, 235, 0.28),
+    0 2px 8px rgba(14, 165, 233, 0.15);
+}
+
+.glass-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--panel-shadow);
+}
+
+.glass-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--panel-shadow);
+}
+
+.glow-ring {
+  background: conic-gradient(
+    from 180deg,
+    #2563eb,
+    #3b82f6,
+    #22d3ee,
+    #0ea5e9,
+    #2563eb
+  );
+  box-shadow:
+    0 0 40px var(--glow-blue),
+    0 0 80px var(--glow-cyan);
+}
+
+.light .glow-ring {
+  box-shadow:
+    0 0 28px rgba(59, 130, 246, 0.35),
+    0 0 48px rgba(14, 165, 233, 0.2);
+}
+
+.chip {
+  background: var(--chip-bg);
+  border: 1px solid var(--border);
 }
 
 .section-padding {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.stars {
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 80px 120px, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1.5px 1.5px at 160px 60px, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 240px 180px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1.2px 1.2px at 320px 90px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 400px 220px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 480px 40px, rgba(255, 255, 255, 0.65), transparent),
+    radial-gradient(1px 1px at 560px 160px, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 600px 280px;
+}
+
+.light-dots {
+  background-image:
+    radial-gradient(1.5px 1.5px at 40px 60px, rgba(96, 165, 250, 0.35), transparent),
+    radial-gradient(1px 1px at 120px 140px, rgba(56, 189, 248, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 220px 40px, rgba(147, 197, 253, 0.4), transparent),
+    radial-gradient(1px 1px at 320px 200px, rgba(59, 130, 246, 0.25), transparent),
+    radial-gradient(1.2px 1.2px at 420px 100px, rgba(14, 165, 233, 0.3), transparent);
+  background-size: 480px 260px;
 }
 
 @media (prefers-reduced-motion: reduce) {

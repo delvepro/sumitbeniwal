@@ -45,14 +45,14 @@ export function MagneticButton({
 
   const variants = {
     primary:
-      "bg-accent text-accent-foreground shadow-lg shadow-accent/25 hover:shadow-accent/40",
+      "gradient-btn text-white hover:brightness-110",
     secondary:
-      "border border-border bg-surface/80 text-foreground backdrop-blur-md hover:border-accent/50 hover:bg-surface-elevated",
+      "border border-border bg-surface-elevated/90 text-foreground shadow-sm backdrop-blur-md hover:border-accent/40 hover:bg-surface-elevated",
     ghost: "text-muted hover:text-foreground",
   };
 
   const baseClass = cn(
-    "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3.5 text-sm font-semibold transition-colors",
+    "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3.5 text-sm font-semibold transition-all",
     variants[variant],
     className,
   );

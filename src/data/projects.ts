@@ -6,9 +6,10 @@ export const projects: Project[] = [
     title: "DelvePro — SaaS & IT Services",
     description:
       "Modern SaaS and IT services site with scalable frontend structure, SEO, and performance tuning. Deployed with Docker, Nginx reverse proxy, and CI/CD via GitHub Actions on AWS (EC2, S3, CloudFront).",
+    category: "SaaS & Platform",
     tags: ["Next.js", "TypeScript", "Docker", "Nginx", "GitHub Actions", "AWS"],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Docker", "Nginx", "AWS EC2", "S3", "CloudFront"],
-    gradient: "from-indigo-500 to-violet-500",
+    gradient: "from-blue-500 to-cyan-500",
     href: "https://www.delvepro.in/",
     architecture: {
       scale: "Marketing site with global CDN delivery; optimized for Core Web Vitals and SEO crawlability.",
@@ -48,9 +49,10 @@ export const projects: Project[] = [
     title: "Telegram Channel Analyzer",
     description:
       "Analytics platform with real-time dashboards and event-driven data pipelines. Python backend for extraction and reporting; React frontend for live engagement metrics.",
+    category: "Analytics Platform",
     tags: ["React", "TypeScript", "Python", "Real-time", "Event-Driven"],
     stack: ["React", "TypeScript", "Python", "REST APIs", "WebSockets", "PostgreSQL"],
-    gradient: "from-sky-500 to-cyan-500",
+    gradient: "from-sky-500 to-blue-600",
     href: "https://telegramagentfrontend.vercel.app/",
     architecture: {
       scale: "Multi-channel analytics with near real-time dashboard updates for growth and engagement KPIs.",
@@ -90,9 +92,10 @@ export const projects: Project[] = [
     title: "ONNFX — Forex Trading Platform",
     description:
       "Forex platform with service-layer backend, scalable auth, rate-limited APIs, Redis caching, and WebSockets for live market updates.",
+    category: "Trading Platform",
     tags: ["Next.js", "TypeScript", "Redis", "WebSockets", "MongoDB", "Docker"],
     stack: ["Next.js", "TypeScript", "Node.js", "Redis", "WebSockets", "MongoDB", "PostgreSQL", "Docker", "Nginx"],
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-cyan-500 to-sky-500",
     href: "https://www.onnfx.com/",
     architecture: {
       scale: "Multi-role trading platform with admin dashboards, user accounts, and live market-sensitive UI updates.",
@@ -134,9 +137,10 @@ export const projects: Project[] = [
     title: "MyCompass UAE — IT Services Platform",
     description:
       "IT services platform with clean architecture, repository-pattern APIs, employee CRM workflows, and multi-tenant admin operations.",
+    category: "IT Services",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Clean Architecture", "CRM"],
     stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker", "Nginx", "GitHub Actions"],
-    gradient: "from-blue-500 to-indigo-500",
+    gradient: "from-blue-600 to-sky-500",
     href: "https://www.mycompassuae.com/",
     architecture: {
       scale: "B2B operations platform with admin panel, employee CRM, and workflow modules across teams.",
@@ -176,9 +180,10 @@ export const projects: Project[] = [
     title: "Bluefin Realty — Real Estate Platform",
     description:
       "99acres-style platform with Admin, Agent, and User panels, CRM, lead management, and service-layer APIs.",
+    category: "Real Estate",
     tags: ["React", "TypeScript", "PostgreSQL", "Service Layer", "RBAC"],
     stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "MongoDB", "Docker", "Nginx"],
-    gradient: "from-cyan-500 to-blue-600",
+    gradient: "from-sky-400 to-blue-600",
     href: "https://www.realbluefin.com/",
     architecture: {
       scale: "Three-sided marketplace: public listings, agent workflows, and admin oversight with lead pipeline tracking.",
@@ -218,9 +223,10 @@ export const projects: Project[] = [
     title: "PromoAds — Digital Marketing Website",
     description:
       "Digital marketing site with SEO-optimized pages, reusable UI components, and cloud-ready AWS deployment.",
+    category: "Marketing",
     tags: ["Next.js", "TypeScript", "AWS S3", "CloudFront", "CI/CD"],
     stack: ["Next.js", "TypeScript", "AWS S3", "CloudFront", "GitHub Actions", "PostgreSQL"],
-    gradient: "from-orange-500 to-pink-500",
+    gradient: "from-blue-500 to-cyan-400",
     href: "https://www.promoadsreal.com/",
     architecture: {
       scale: "Campaign-focused marketing site with multiple service landing pages and SEO targets.",
@@ -253,9 +259,10 @@ export const projects: Project[] = [
     title: "Tune Plus — Music Distribution Platform",
     description:
       "Distribution platform (400K+ assets, 4K+ users, 230M+ views) with queues, background jobs, scalable auth, and royalty analytics.",
+    category: "Music Platform",
     tags: ["React", "TypeScript", "Redis", "Queue Systems", "MongoDB", "Notifications"],
     stack: ["React", "TypeScript", "Node.js", "Redis", "MongoDB", "PostgreSQL", "AWS S3", "Docker", "Nginx"],
-    gradient: "from-violet-500 to-fuchsia-500",
+    gradient: "from-cyan-500 to-blue-500",
     href: "https://tuneplus.org/",
     architecture: {
       scale: "400K+ assets, 4K+ users, 230M+ views — high-volume uploads, metadata processing, and royalty reporting.",
@@ -297,9 +304,10 @@ export const projects: Project[] = [
     title: "Imergey — Social Media Management Platform",
     description:
       "LinkedIn management with Redis queues, WebSockets, background publishing, team collaboration, and queue-based email alerts.",
+    category: "Social Media",
     tags: ["React", "TypeScript", "Redis", "WebSockets", "PostgreSQL", "Event-Driven"],
     stack: ["React", "TypeScript", "Node.js", "Redis", "WebSockets", "PostgreSQL", "MongoDB", "Docker", "Nginx"],
-    gradient: "from-cyan-500 to-blue-500",
+    gradient: "from-sky-500 to-cyan-500",
     href: "http://103.189.173.7:2367/",
     architecture: {
       scale: "Team workspaces scheduling posts, analytics, and AI-assisted research for LinkedIn-focused campaigns.",
@@ -339,9 +347,10 @@ export const projects: Project[] = [
     title: "Rajat Ganga Jewellery — E-Commerce",
     description:
       "Jewellery e-commerce with catalog management, inquiry workflows, secure admin APIs, Docker, and Nginx production stack.",
+    category: "E-Commerce",
     tags: ["Next.js", "TypeScript", "Docker", "Nginx", "MongoDB", "Rate Limiting"],
     stack: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Docker", "Nginx", "Redis"],
-    gradient: "from-amber-500 to-rose-500",
+    gradient: "from-blue-600 to-cyan-500",
     href: "https://www.rajatgangajewelsstudio.com/",
     architecture: {
       scale: "Product catalog, collections, and inquiry-driven sales funnel for a premium jewellery brand.",
@@ -373,6 +382,64 @@ export const projects: Project[] = [
         "Static/ISR pages for catalog SEO at scale.",
         "Horizontal API scaling behind Nginx.",
         "Asset offload to object storage as catalog grows.",
+      ],
+    },
+  },
+  {
+    slug: "rtde",
+    title: "RTDE — Rajasthan Tourism & Development",
+    description:
+      "Tourism platform for Rajasthan covering tours, trips, events, ticketing, and end-to-end management — built for travelers, operators, and admins.",
+    category: "Tourism Platform",
+    tags: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker"],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Docker",
+      "Nginx",
+      "AWS",
+    ],
+    gradient: "from-sky-500 to-blue-600",
+    href: "#projects",
+    architecture: {
+      scale:
+        "Statewide tourism platform for destinations, packaged tours, trips, cultural events, ticket sales, and operator/admin management.",
+      backendArchitecture:
+        "Service-layer Node.js APIs with modules for tours, trips, events, bookings, payments, and admin operations; Next.js TypeScript frontend for travelers and dashboards.",
+      authFlow:
+        "Role-based auth for travelers, tour operators, event organizers, and admins; JWT + refresh tokens with permission-guarded booking and management routes.",
+      caching:
+        "Redis for session data, popular tour/event listings, seat/ticket availability snapshots, and rate-limit counters on booking APIs.",
+      deploymentInfra:
+        "Dockerized services behind Nginx, CI/CD deployments, AWS-ready hosting (EC2/S3/CloudFront) for media and static assets.",
+      apis:
+        "REST APIs for catalog (tours/trips/events), inventory & ticketing, bookings, payments callbacks, and admin CRM/management endpoints.",
+      databaseDesign:
+        "PostgreSQL for bookings, tickets, payments, and relational inventory; MongoDB for flexible destination/tour content and media metadata.",
+    },
+    caseStudy: {
+      problem:
+        "Rajasthan needed a unified digital platform to showcase tourism offerings, sell tickets for tours/trips/events, and give operators a single place to manage inventory, schedules, and bookings.",
+      architecture:
+        "TypeScript full-stack: Next.js traveler & admin UIs over service-layer APIs, Redis-backed availability caching, dual-database design for bookings vs content, containerized deployment.",
+      challenges: [
+        "Handling concurrent ticket inventory without overselling seats.",
+        "Modeling diverse products — day tours, multi-day trips, and timed events — in one booking flow.",
+        "Building operator/admin tools for schedules, pricing, and booking management.",
+      ],
+      optimization: [
+        "Pre-cached availability windows for hot events and popular tours.",
+        "Indexed booking queries by date, destination, and operator.",
+        "CDN-ready media delivery for destination and event imagery.",
+      ],
+      scalability: [
+        "Horizontal API scaling behind Nginx for peak festival/ticket rushes.",
+        "Queue-ready path for booking confirmations and email/SMS notifications.",
+        "Modular services allow splitting ticketing and catalog into dedicated workers later.",
       ],
     },
   },

@@ -33,7 +33,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       whileTap={{ scale: 0.92 }}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className={cn(
-        "relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-border bg-surface text-foreground shadow-sm transition-colors hover:border-accent/40 hover:bg-surface-elevated",
+        "relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-border bg-surface/70 text-foreground backdrop-blur-md transition-colors hover:border-accent/40 hover:bg-surface-elevated",
         className,
       )}
     >
@@ -45,7 +45,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
         className="flex items-center justify-center"
       >
-        {isDark ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+        {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
       </motion.span>
     </motion.button>
   );

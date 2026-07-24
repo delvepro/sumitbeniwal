@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning className="dark scroll-smooth">
       <body
         className={`${outfit.variable} ${jetbrains.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
       >

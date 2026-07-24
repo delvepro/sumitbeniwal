@@ -15,7 +15,7 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%)",
+          background: "linear-gradient(135deg, #070b16 0%, #0c1a36 50%, #0a2744 100%)",
           color: "#f8fafc",
           fontFamily: "system-ui, sans-serif",
         }}
@@ -24,7 +24,7 @@ export default function OpenGraphImage() {
           style={{
             fontSize: 28,
             fontWeight: 600,
-            color: "#a5b4fc",
+            color: "#60a5fa",
             marginBottom: 16,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
@@ -38,7 +38,7 @@ export default function OpenGraphImage() {
             fontWeight: 800,
             lineHeight: 1.1,
             marginBottom: 24,
-            background: "linear-gradient(90deg, #c7d2fe, #818cf8, #6366f1)",
+            background: "linear-gradient(90deg, #60a5fa, #38bdf8, #22d3ee)",
             backgroundClip: "text",
             color: "transparent",
           }}
@@ -55,10 +55,10 @@ export default function OpenGraphImage() {
               style={{
                 padding: "10px 20px",
                 borderRadius: 999,
-                border: "1px solid #6366f1",
-                background: "rgba(99, 102, 241, 0.15)",
+                border: "1px solid #3b82f6",
+                background: "rgba(59, 130, 246, 0.15)",
                 fontSize: 22,
-                color: "#e0e7ff",
+                color: "#dbeafe",
               }}
             >
               {tag}
